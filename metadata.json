@@ -1,0 +1,6 @@
+{
+  "name": "GarbhaRaksha (गर्भक्षा) - Maternal Health & Clinical Triage",
+  "description": "Offline-first remote maternal vital monitoring and real-time clinical decision support system for high-risk pregnancies in resource-constrained regions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
