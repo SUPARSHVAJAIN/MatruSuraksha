@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import { VitalLoggingModal } from './VitalLoggingModal';
 import { MedicationReminders } from './MedicationReminders';
-import { MaternalGamification } from './MaternalGamification';
+import { GamificationDashboard } from './GamificationDashboard';
 import { GamificationCelebrationModal } from './GamificationCelebrationModal';
 import { speakMessage } from '../../services/audio';
 import { translations } from '../../translations';
@@ -190,10 +190,11 @@ export const PatientPortal: React.FC<PatientPortalProps> = ({
         </div>
       </div>
 
-      {/* 2. Gamification & Streak Dashboard (Hero Positive Reinforcement) */}
-      <MaternalGamification
+      {/* 2. Gamification Dashboard (Current Streak Count & Earned Badges) */}
+      <GamificationDashboard
         profile={gameProfile}
         language={language}
+        onOpenLogModal={() => setIsModalOpen(true)}
       />
 
       {/* 3. Critical or Watch Emergency Warning Banner (if active) */}

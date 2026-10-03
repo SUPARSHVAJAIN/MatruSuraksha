@@ -59,27 +59,26 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenChat,
 }) => {
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <div className="w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-3">
           
-          {/* Logo & Sanskrit Brand: GarbhaRaksha (गर्भक्षा) */}
+          {/* Logo & Sanskrit Brand: MatruSuraksha (मातृसुरक्षा) */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 via-rose-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-rose-200">
               <Heart className="w-5 h-5 fill-white" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-xl font-bold tracking-tight text-slate-900 font-display">GarbhaRaksha</span>
-                <span className="text-xs font-semibold text-rose-600 font-sans tracking-wide">
-                  (गर्भक्षा)
+                <span className="text-xl font-bold tracking-tight text-slate-900 font-display">
+                  MatruSuraksha (मातृसुरक्षा)
                 </span>
                 <span className="text-[9px] tracking-wider font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-1 py-0.5 rounded">
                   RURAL TRIAGE
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 hidden sm:block">
-                दिव्या मातृरक्षा • Sacred Maternal Health & Triage
+                मातृसुरक्षा • Sacred Maternal Health & Triage
               </p>
             </div>
           </div>
@@ -258,14 +257,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             )}
 
-            {/* GarbhaRaksha AI Assistant Chat Button */}
+            {/* MatruSuraksha AI Assistant Chat Button */}
             <button
               onClick={onOpenChat}
               className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white text-xs font-bold rounded-xl shadow-xs transition-all active:scale-98"
-              title="Open GarbhaRaksha AI Multi-Turn Chatbot"
+              title="Open MatruSuraksha AI Multi-Turn Chatbot"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-200 animate-spin" style={{ animationDuration: '6s' }} />
-              <span className="hidden md:inline">GarbhaRaksha AI</span>
+              <span className="hidden md:inline">MatruSuraksha AI</span>
               <span className="md:hidden">AI</span>
             </button>
 
@@ -290,7 +289,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

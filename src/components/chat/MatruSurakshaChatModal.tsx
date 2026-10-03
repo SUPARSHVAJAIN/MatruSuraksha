@@ -28,7 +28,7 @@ interface Message {
   groundingQueries?: string[];
 }
 
-interface GarbhaRakshaChatModalProps {
+interface MatruSurakshaChatModalProps {
   isOpen: boolean;
   onClose: () => void;
   currentPatient?: UserType | null;
@@ -51,7 +51,7 @@ const DEFAULT_PROMPTS = {
   ],
 };
 
-export const GarbhaRakshaChatModal: React.FC<GarbhaRakshaChatModalProps> = ({
+export const MatruSurakshaChatModal: React.FC<MatruSurakshaChatModalProps> = ({
   isOpen,
   onClose,
   currentPatient,
@@ -68,8 +68,8 @@ export const GarbhaRakshaChatModal: React.FC<GarbhaRakshaChatModalProps> = ({
       role: 'model',
       text:
         defaultRoleContext === 'clinical_specialist'
-          ? 'Greetings Doctor. I am GarbhaRaksha Clinical AI Consultant (गर्भक्षा - Sacred Maternal Guardian). I assist with WHO/ACOG evidence-based obstetrics protocols, severe pre-eclampsia management, and rural referral guidelines. How may I assist your triage decision today?'
-          : 'Namaste & Welcome Mama! I am GarbhaRaksha Companion (गर्भक्षा सहायक). You can ask me any question about your pregnancy, body changes, baby movements, or health symptoms.',
+          ? 'Greetings Doctor. I am MatruSuraksha Clinical AI Consultant (मातृसुरक्षा - Sacred Maternal Guardian). I assist with WHO/ACOG evidence-based obstetrics protocols, severe pre-eclampsia management, and rural referral guidelines. How may I assist your triage decision today?'
+          : 'Namaste & Welcome Mama! I am MatruSuraksha Companion (मातृसुरक्षा सहायक). You can ask me any question about your pregnancy, body changes, baby movements, or health symptoms.',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -151,7 +151,7 @@ export const GarbhaRakshaChatModal: React.FC<GarbhaRakshaChatModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-3 sm:p-4 overflow-y-auto">
       <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto h-[88vh] flex flex-col">
         
-        {/* Header with Sanskrit Name: GarbhaRaksha (गर्भक्षा) */}
+        {/* Header with Sanskrit Name: MatruSuraksha (मातृसुरक्षा) */}
         <div className="px-6 py-4 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white shadow-md shadow-rose-900/40">
@@ -159,9 +159,9 @@ export const GarbhaRakshaChatModal: React.FC<GarbhaRakshaChatModalProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-base font-bold font-display">GarbhaRaksha AI</h3>
+                <h3 className="text-base font-bold font-display">MatruSuraksha AI</h3>
                 <span className="text-xs font-semibold text-amber-300 font-sans tracking-wide">
-                  (गर्भक्षा)
+                  (मातृसुरक्षा)
                 </span>
                 <span className="text-[10px] tracking-wider uppercase font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-1.5 py-0.5 rounded">
                   GEMINI ACTIVE
@@ -252,7 +252,7 @@ export const GarbhaRakshaChatModal: React.FC<GarbhaRakshaChatModalProps> = ({
                 >
                   <div className="flex items-center justify-between gap-3 text-[10px] opacity-75 mb-0.5">
                     <span className="font-bold">
-                      {isUser ? 'You' : roleContext === 'clinical_specialist' ? 'GarbhaRaksha Clinical AI' : 'GarbhaRaksha Companion'}
+                      {isUser ? 'You' : roleContext === 'clinical_specialist' ? 'MatruSuraksha Clinical AI' : 'MatruSuraksha Companion'}
                     </span>
                     <span>{msg.timestamp}</span>
                   </div>
@@ -304,8 +304,8 @@ export const GarbhaRakshaChatModal: React.FC<GarbhaRakshaChatModalProps> = ({
               </div>
               <span className="font-medium">
                 {roleContext === 'clinical_specialist'
-                  ? 'GarbhaRaksha AI is analyzing medical literature...'
-                  : 'GarbhaRaksha Companion is thinking...'}
+                  ? 'MatruSuraksha AI is analyzing medical literature...'
+                  : 'MatruSuraksha Companion is thinking...'}
               </span>
             </div>
           )}

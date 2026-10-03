@@ -41,7 +41,7 @@ export interface Translations {
 
 export const translations: Record<string, Translations> = {
   en: {
-    appName: 'GarbhaRaksha',
+    appName: 'MatruSuraksha',
     tagline: 'Sacred Maternal Health & Clinical Triage',
     logVitals: 'Log Today’s Health',
     bloodPressure: 'Blood Pressure',
@@ -81,7 +81,7 @@ export const translations: Record<string, Translations> = {
     streakReinforcement: 'Wonderful dedication! Daily checks protect you and your baby.',
   },
   sw: {
-    appName: 'AfiyaMama',
+    appName: 'MatruSuraksha',
     tagline: 'Afya ya Mama Mjamzito na Mtoto',
     logVitals: 'Rekodi Afya ya Leo',
     bloodPressure: 'Shinikizo la Damu (BP)',
@@ -121,7 +121,7 @@ export const translations: Record<string, Translations> = {
     streakReinforcement: 'Kazi nzuri sana Mama! Kurekodi kila siku kunalinda mtoto wako.',
   },
   hi: {
-    appName: 'AfiyaMama',
+    appName: 'MatruSuraksha',
     tagline: 'मातृ स्वास्थ्य सुरक्षा ट्रैकर',
     logVitals: 'आज का स्वास्थ्य दर्ज करें',
     bloodPressure: 'रक्तचाप (ब्लड प्रेशर)',
@@ -161,7 +161,7 @@ export const translations: Record<string, Translations> = {
     streakReinforcement: 'बहुत बढ़िया! नियमित रूप से जांच दर्ज करने से आप और आपका शिशु सुरक्षित रहते हैं।',
   },
   es: {
-    appName: 'AfiyaMama',
+    appName: 'MatruSuraksha',
     tagline: 'Monitoreo Materno y Alerta Temprana',
     logVitals: 'Registrar Salud de Hoy',
     bloodPressure: 'Presión Arterial (PA)',
@@ -201,7 +201,7 @@ export const translations: Record<string, Translations> = {
     streakReinforcement: '¡Excelente dedicación! El registro diario protege tu salud y la de tu bebé.',
   },
   fr: {
-    appName: 'AfiyaMama',
+    appName: 'MatruSuraksha',
     tagline: 'Suivi de Santé Maternelle',
     logVitals: 'Enregistrer la Santé du Jour',
     bloodPressure: 'Tension Artérielle',

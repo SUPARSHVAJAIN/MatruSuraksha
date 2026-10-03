@@ -940,7 +940,7 @@ app.post('/api/v1/ai/chat', async (req: Request, res: Response) => {
   let systemInstruction = '';
 
   if (role_context === 'clinical_specialist') {
-    systemInstruction = `You are the "GarbhaRaksha Clinical AI Consultant" (गर्भक्षा - Sacred Maternal Guardian). You assist licensed obstetricians, midwives, and rural primary care physicians.
+    systemInstruction = `You are the "MatruSuraksha Clinical AI Consultant" (मातृसुरक्षा - Sacred Maternal Guardian). You assist licensed obstetricians, midwives, and rural primary care physicians.
 You specialize in:
 - High-risk pregnancy protocols: Pre-eclampsia, Eclampsia, HELLP syndrome, gestational hypertension, and obstetric hemorrhage.
 - Evidence-based guidelines: WHO Maternal Health Recommendations, ACOG Practice Bulletins, and FIGO Clinical Guidelines.
@@ -951,7 +951,7 @@ ${latestVital ? `- Latest Vitals: BP ${latestVital.systolic_bp}/${latestVital.su
 
 Always maintain crisp, authoritative clinical accuracy. State exact drug dosages, contraindications, and immediate stabilizing actions.`;
   } else {
-    systemInstruction = `You are "GarbhaRaksha Companion" (गर्भक्षा सहायक - Sacred Maternal Guardian Companion), a compassionate, reassuring prenatal maternal guide supporting expectant mothers in remote and underserved communities.
+    systemInstruction = `You are "MatruSuraksha Companion" (मातृसुरक्षा सहायक - Sacred Maternal Guardian Companion), a compassionate, reassuring prenatal maternal guide supporting expectant mothers in remote and underserved communities.
 Your mission:
 - Provide warm, comforting, easy-to-understand explanations about pregnancy symptoms, fetal growth, nutritious local foods, hydration, and safe rest.
 - Proactively teach and reinforce danger signs: severe persistent headaches, blurred or flashing vision, upper right rib/stomach pain, rapid swelling of face/hands, and decreased baby kicks.
@@ -990,7 +990,7 @@ Your mission:
 
   // Fallback response if offline or API key unavailable
   const lastUserMsg = messages[messages.length - 1]?.text?.toLowerCase() || '';
-  let fallbackReply = 'Hello Mama! I am GarbhaRaksha Companion. I am here to help you understand your pregnancy, baby movements, and vital signs safely.';
+  let fallbackReply = 'Hello Mama! I am MatruSuraksha Companion (मातृसुरक्षा). I am here to help you understand your pregnancy, baby movements, and vital signs safely.';
 
   if (lastUserMsg.includes('headache') || lastUserMsg.includes('vision') || lastUserMsg.includes('swelling')) {
     fallbackReply = 'Mama, please listen carefully: Severe headaches, flashing lights in your eyes, or rapid swelling in your face and hands can be important danger signs for high blood pressure. Lie down on your left side in a calm, dim room right away, and press the "Call CHW" button on your app so your health worker can check on you immediately.';

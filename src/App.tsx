@@ -4,7 +4,7 @@ import { PatientPortal } from './components/patient/PatientPortal';
 import { ClinicianDashboard } from './components/clinician/ClinicianDashboard';
 import { CHWMobileView } from './components/chw/CHWMobileView';
 import { ProfessionalLoginModal } from './components/auth/ProfessionalLoginModal';
-import { GarbhaRakshaChatModal } from './components/chat/GarbhaRakshaChatModal';
+import { MatruSurakshaChatModal } from './components/chat/MatruSurakshaChatModal';
 import { api, type NetworkMode } from './services/api';
 import { speakMessage } from './services/audio';
 import type { User, UserRole, Pregnancy, VitalLog, Alert, PatientDashboardItem } from './types';
@@ -236,26 +236,29 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-rose-500 selection:text-white">
       
-      {/* Top Navigation with Role Switcher & Network Simulator */}
-      <Navbar
-        currentRole={currentRole}
-        onRoleChange={setCurrentRole}
-        networkMode={networkMode}
-        onNetworkModeChange={setNetworkMode}
-        offlineCount={offlineCount}
-        onSync={handleSync}
-        isSyncing={isSyncing}
-        selectedLanguage={selectedLanguage}
-        onLanguageChange={setSelectedLanguage}
-        selectedPatient={selectedPatient}
-        allPatients={allPatients}
-        onSelectPatient={handleSelectPatient}
-        pendingAlertsCount={clinicianMetrics.pending_alerts}
-        activeStaff={activeStaff}
-        onOpenStaffLogin={() => setIsStaffLoginOpen(true)}
-        onStaffLogout={handleStaffLogout}
-        onOpenChat={() => setIsChatOpen(true)}
-      />
+      {/* Header with Sanskrit Identity: MatruSuraksha (मातृसुरक्षा) */}
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+        <h1 className="sr-only">MatruSuraksha (मातृसुरक्षा)</h1>
+        <Navbar
+          currentRole={currentRole}
+          onRoleChange={setCurrentRole}
+          networkMode={networkMode}
+          onNetworkModeChange={setNetworkMode}
+          offlineCount={offlineCount}
+          onSync={handleSync}
+          isSyncing={isSyncing}
+          selectedLanguage={selectedLanguage}
+          onLanguageChange={setSelectedLanguage}
+          selectedPatient={selectedPatient}
+          allPatients={allPatients}
+          onSelectPatient={handleSelectPatient}
+          pendingAlertsCount={clinicianMetrics.pending_alerts}
+          activeStaff={activeStaff}
+          onOpenStaffLogin={() => setIsStaffLoginOpen(true)}
+          onStaffLogout={handleStaffLogout}
+          onOpenChat={() => setIsChatOpen(true)}
+        />
+      </header>
 
       {/* Main View Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -320,7 +323,7 @@ export default function App() {
       {/* Subtle Footer with Sanskrit Motto */}
       <footer className="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 space-y-0.5">
         <p className="font-semibold text-slate-700">
-          GarbhaRaksha (गर्भक्षा) • दिव्या मातृरक्षा • Sacred Maternal Health & Clinical Triage System
+          MatruSuraksha (मातृसुरक्षा) • Sacred Maternal Health & Clinical Triage System
         </p>
         <p className="text-[11px] text-slate-400">
           Engineered for Last-Mile Rural Continuity • Offline-First Edge Telemetry & Clinical Decision Support
@@ -334,8 +337,8 @@ export default function App() {
         onLoginSuccess={handleStaffLoginSuccess}
       />
 
-      {/* GarbhaRaksha Gemini AI Multi-Turn Chatbot */}
-      <GarbhaRakshaChatModal
+      {/* MatruSuraksha Gemini AI Multi-Turn Chatbot */}
+      <MatruSurakshaChatModal
         isOpen={isChatOpen}
         onClose={() => setIsChatOpen(false)}
         currentPatient={selectedPatient}
